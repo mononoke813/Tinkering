@@ -1,9 +1,31 @@
 console.log("hello");
 
 //paintball guns can hold max 200 rounds
-//paintball colors are random and hold diff pt values
+
+let paintballRounds = 200;
+
+//paintball colors are filled to random amounts and hold different point values
 //red balls earn 5 pts, blue earns 10 pts, green earns 4 pt, yellow earns 6 pts
+
+const redPaintballPoints = 5;
+const bluePaintballPoints = 10;
+const greenPaintballPoints = 4;
+const yellowPaintballPoints = 6;
+
 //the balls are not in equal quantities and unk amounts of each
+
+const randomRedPaintballs = Math.floor(Math.random() * 200);
+console.log(randomRedPaintballs);
+const randomBluePaintballs = Math.floor(Math.random() * 200);
+console.log(randomBluePaintballs);
+const randomGreenPaintballs = Math.floor(Math.random() * 200);
+console.log(randomGreenPaintballs);
+const randomYellowPaintballs = Math.floor(Math.random() * 200);
+console.log(randomYellowPaintballs);
+
+paintballRounds = (randomRedPaintballs + randomBluePaintballs + randomGreenPaintballs + randomYellowPaintballs);
+console.log(paintballRounds);
+
 //there are two ways to fire: 1. rapid fire which is 12 rounds per second, and
 //  2. normal fire which is 7 rounds per second
 //teams consist of 8 players max and play in matches to determine a victor
