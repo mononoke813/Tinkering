@@ -1,30 +1,56 @@
-console.log("hello");
+console.log("Greetings from Tinkertown!");
 
 //paintball guns can hold max 200 rounds
 
-let paintballRounds = 200;
+const eachPlayerPaintballRounds = 200;
 
 //paintball colors are filled to random amounts and hold different point values
 //red balls earn 5 pts, blue earns 10 pts, green earns 4 pt, yellow earns 6 pts
 
-const redPaintballPoints = 5;
-const bluePaintballPoints = 10;
 const greenPaintballPoints = 4;
+const redPaintballPoints = 5;
 const yellowPaintballPoints = 6;
+const bluePaintballPoints = 10;
 
 //the balls are not in equal quantities and unk amounts of each
+//green = randomNum;
+let randomGreenPaintballs = Math.floor(Math.random() * 200);
+let redMaxRange = 200 - randomGreenPaintballs;
 
-const randomRedPaintballs = Math.floor(Math.random() * 200);
-console.log(randomRedPaintballs);
-const randomBluePaintballs = Math.floor(Math.random() * 200);
-console.log(randomBluePaintballs);
-const randomGreenPaintballs = Math.floor(Math.random() * 200);
-console.log(randomGreenPaintballs);
-const randomYellowPaintballs = Math.floor(Math.random() * 200);
-console.log(randomYellowPaintballs);
+let randomRedPaintballs =  Math.floor(Math.random() * redMaxRange);
+let yellowMaxRange = 200 - randomGreenPaintballs - randomRedPaintballs;
 
-paintballRounds = (randomRedPaintballs + randomBluePaintballs + randomGreenPaintballs + randomYellowPaintballs);
-console.log(paintballRounds);
+let randomYellowPaintballs = Math.floor(Math.random() * yellowMaxRange);
+let bluePaintballCount = 200 - randomGreenPaintballs - randomRedPaintballs - randomYellowPaintballs;
+
+let randomBluePaintballs = bluePaintballCount;
+
+
+
+
+
+
+
+console.log(`Random green amount: ${randomGreenPaintballs}`);
+
+//for (let i = 200 ; i > eachPlayerPaintballRounds; i--)
+
+//randomRedPaintballs = eachPlayerPaintballRounds - randomGreenPaintballs;
+console.log(`Random red amount: ${randomRedPaintballs}`);
+
+
+//randomYellowPaintballs = eachPlayerPaintballRounds - randomGreenPaintballs - randomRedPaintballs;
+console.log(`Random yellow amount: ${randomYellowPaintballs}`);
+
+
+//randomBluePaintballs = eachPlayerPaintballRounds - randomGreenPaintballs - randomRedPaintballs - randomYellowPaintballs;
+console.log(`Random blue amount: ${randomBluePaintballs}`);
+
+
+// let randomPaintballsTotal = randomRedPaintballs + ;
+// console.log(`This is the total for all random paintballs: ${randomPaintballsTotal}`);
+
+//console.log(`Supposed to be the total (200) rounds of all random paintballs: ${paintballRounds}`);
 
 //there are two ways to fire: 1. rapid fire which is 12 rounds per second, and
 //  2. normal fire which is 7 rounds per second
