@@ -1,50 +1,47 @@
 console.log("Greetings from Tinkertown!");
 
 //paintball guns can hold max 200 rounds
+//paintball colors are filled at random and hold different point values
+//red paintballs earn 4 pts, blue earns 10 pts, green earns 2 pt, yellow earns 5 pts
 
-const eachPlayerPaintballRounds = 200;
-
-//paintball colors are filled to random amounts and hold different point values
-//red balls earn 5 pts, blue earns 10 pts, green earns 4 pt, yellow earns 6 pts
-
-const greenPaintballPoints = 4;
-const redPaintballPoints = 5;
-const yellowPaintballPoints = 6;
+const greenPaintballPoints = 2;
+const redPaintballPoints = 4;
+const yellowPaintballPoints = 5;
 const bluePaintballPoints = 10;
 
-//the balls are not in equal quantities and unk amounts of each
-//green = randomNum;
-let randomGreenPaintballs = Math.floor(Math.random() * 200);
-let redMaxRange = 200 - randomGreenPaintballs;
+//the paintballs are not in equal quantities and players find out the amount of each color they will get once they are assigned a paintball gun
 
-let randomRedPaintballs =  Math.floor(Math.random() * redMaxRange);
-let yellowMaxRange = 200 - randomGreenPaintballs - randomRedPaintballs;
+const eachPaintballContainer = () => {
+    let randomGreenPaintballs = Math.floor(Math.random() * 200);
+    let redMaxRange = 200 - randomGreenPaintballs;
+    //console.log(`Random green amount: ${randomGreenPaintballs}`);
 
-let randomYellowPaintballs = Math.floor(Math.random() * yellowMaxRange);
-let bluePaintballCount = 200 - randomGreenPaintballs - randomRedPaintballs - randomYellowPaintballs;
+    let randomRedPaintballs = Math.floor(Math.random() * redMaxRange);
+    let yellowMaxRange = 200 - randomGreenPaintballs - randomRedPaintballs;
+    //console.log(`Random red amount: ${randomRedPaintballs}`);
 
-let randomBluePaintballs = bluePaintballCount;
+    let randomYellowPaintballs = Math.floor(Math.random() * yellowMaxRange);
+    let bluePaintballCount = 200 - randomGreenPaintballs - randomRedPaintballs - randomYellowPaintballs;
+    //console.log(`Random yellow amount: ${randomYellowPaintballs}`);
 
+    let randomBluePaintballs = bluePaintballCount;
+    //console.log(`Random blue amount: ${randomBluePaintballs}`);
 
+    return `The following are your paintball counts: 
+    Green Paintballs = ${randomGreenPaintballs};
+    Red Paintballs = ${randomRedPaintballs};
+    Yellow Paintballs = ${randomYellowPaintballs};
+    Blue Paintballs = ${randomBluePaintballs}.`;
+}
 
+const player1 = eachPaintballContainer();
+console.log(player1);
 
+const player2 = eachPaintballContainer();
+console.log(player2);
 
-
-
-console.log(`Random green amount: ${randomGreenPaintballs}`);
-
-//for (let i = 200 ; i > eachPlayerPaintballRounds; i--)
-
-//randomRedPaintballs = eachPlayerPaintballRounds - randomGreenPaintballs;
-console.log(`Random red amount: ${randomRedPaintballs}`);
-
-
-//randomYellowPaintballs = eachPlayerPaintballRounds - randomGreenPaintballs - randomRedPaintballs;
-console.log(`Random yellow amount: ${randomYellowPaintballs}`);
-
-
-//randomBluePaintballs = eachPlayerPaintballRounds - randomGreenPaintballs - randomRedPaintballs - randomYellowPaintballs;
-console.log(`Random blue amount: ${randomBluePaintballs}`);
+const player3 = eachPaintballContainer();
+console.log(player3);
 
 
 // let randomPaintballsTotal = randomRedPaintballs + ;
