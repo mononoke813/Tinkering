@@ -12,7 +12,7 @@ const bluePaintballPoints = 10;
 //the paintballs are not in equal quantities and players find out the amount of each color they will get once they are assigned a paintball gun
 
 const eachPaintballContainer = () => {
-    let randomGreenPaintballs = Math.floor(Math.random() * 200);
+    let randomGreenPaintballs = Math.floor(Math.random() * 200) + 0;
     let redMaxRange = 200 - randomGreenPaintballs;
     //console.log(`Random green amount: ${randomGreenPaintballs}`);
 
