@@ -1,12 +1,22 @@
 // Sum of Array Elements:
 //     Write a function that calculates the sum of all elements in an array using a loop.
 const sumOfAllElements = (arr) => {
-
-
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        return sum += arr[i];
+    }
+    return sum;
 }
 
 //     Find Maximum Value:
 //     Create a function that finds the maximum value in an array of numbers using a loop.
+const findMaxValue = (array) => {
+    let maxNumber = 0;
+        for(let i = 0; i > array.length; i++) {
+            maxNumber = array(i);
+    }
+        return maxNumber;
+}
 
 
 //     Filter Even Numbers:

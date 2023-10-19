@@ -64,10 +64,12 @@ console.log(charLast2);
 //     Write a function isPalindrome(str) that takes in a string and returns true if the string is a palindrome, false otherwise. A palindrome is a word that is spelled the same forwards and backwards i.e. racecar, mom, kayak.
 //     To help, here is a function reverseString(str) that takes in a string and returns the reversed string. You'll need to use it to solve isPalindrome.
 const reverseString = (str) => {
-    if(str === str.split("").reverse().join("")) {
-        return true;
+    if(str !== str.split("").reverse().join("")) {
+        return false;
 } else {
-    return false;
+        str === str.split("").reverse().join("")
+        let reverse = str.split("").reverse("").join("");
+        return reverse;
 }
 }
 
@@ -76,3 +78,5 @@ console.log(pal1);
 
 const pal2 = reverseString("racecar");
 console.log(pal2);
+
+
