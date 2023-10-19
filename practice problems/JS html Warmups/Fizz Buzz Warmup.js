@@ -3,19 +3,19 @@
 
 
 const fizzBuzz = (start, end) => {
-    for (let i = start; i < end; i++) {
+    for (let i = start; i <= end; i++) {
 
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log(`${i} is divisible by 3 and 5! FizzBuzz`);
+            console.log(`${i} FizzBuzz`);
 
         } else if (i % 3 === 0) {
-            console.log(`${i} this number is divisible by 3! Fizz`);
+            console.log(`${i} Fizz`);
 
         } else if (i % 5 === 0) {
-            console.log(`${i} this number is divisible by 5! Buzz`);
+            console.log(`${i} Buzz`);
 
         } else {
-            console.log(`${i} this number is just not.`);
+            console.log(`${i}`);
         }
     }
 }
