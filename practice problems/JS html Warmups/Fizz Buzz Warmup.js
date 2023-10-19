@@ -11,7 +11,7 @@ const fizzBuzz = (start, end) => {
     
     for (let i = start; i <= end; i++) {
 
-        if (i % 3 === 0 && i % 5 === 0) {
+        if (i % 3 === 0 && i % 5 === 0) {    //*ahem* this could also be (i % 15 === 0)
             console.log(`${i} FizzBuzz`);
 
         } else if (i % 3 === 0) {
