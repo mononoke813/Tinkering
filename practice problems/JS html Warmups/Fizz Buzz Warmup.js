@@ -3,11 +3,19 @@
 
 
 const fizzBuzz = (start, end) => {
+    
+    if(typeof start === "boolean" || typeof end === "boolean") {
+        return false;
+    }
     start = parseFloat(start);             //Jason flair...
     end = parseFloat(end);                 //add-on for... 
     if (isNaN(start) || isNaN(end)) {      //interview example...
         return false;                      //to showcase what I know...
     }                                      //and have learned
+
+    if(parseInt(start) !== start || parseInt(end) !== end) {
+        return false;
+    }
     
     for (let i = start; i <= end; i++) {
 
