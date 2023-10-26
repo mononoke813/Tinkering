@@ -18,7 +18,7 @@ const findMaxValue = (array) => {
         return maxNumber;
 }
     
-f;kdsjhf;iashf
+
 //     Filter Even Numbers:
 //     Write a function that filters even numbers from an array and returns a new array with only the even elements.
 
