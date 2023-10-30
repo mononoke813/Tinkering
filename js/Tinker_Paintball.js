@@ -66,44 +66,19 @@
 // //each match playing field decreases by 30%
 // //barrier objects decrease with each match
 
-// const isPalindrome = (input) => {
-//     if (typeof input === "string") {
-//         let inputToLower = input.toLowerCase();
-//         let inputSplit = inputToLower.split("");
-//         let inputReverse = inputSplit.reverse();
-//         let inputJoin = inputReverse.join("");
-//         return inputJoin;
-//     }
-//
-// }
-// const testing = isPalindrome("Morgan");
-// console.log(testing);
+//split the numbers into strings(?)
+function digitalBoot(n) {
+    let numArray = n.toString().split("");
+    let result;
 
-
-// const isNotPalindrome = (input) => {
-//     if (typeof input !== "string") {
-//         return true;
-//     }
-//     if (typeof input === "string") {
-//         let isPalindrome = input.split("").reverse().join("");
-//         if(input === isPalindrome) {
-//             return false;
-//         }
-//         return true;
-//     }
-// }
-//
-// const testing = isNotPalindrome();
-// console.log("Racecar");
-
-const convertHourToSec = (Hours) => {
-    if(!isNaN(Hours) && Hours >= 0) {
-        let totalSeconds = parseFloat(Hours * 3600);
-        return totalSeconds;
+    while (numArr.length > 1) {
+        result = 0;
+        for(let number of numArr) {
+            result += parseFloat(number);
+        }
+        numArray = result.toString().split("");
     }
-    if(typeof Hours !== "number" || Hours < 0 || typeof Hours === 'string') {
-        return false;
-    }
+    result = parseFloat(numArray.join(""));
+    return result;
 }
-const testing = convertHourToSec("2");
-console.log(testing);
+

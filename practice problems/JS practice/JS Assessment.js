@@ -79,3 +79,46 @@ const isPalindrome = (input) => {
     inputReversed = inputArrReversed.join("");
     return input.toLowerCase() === inputReversed.toLowerCase();
 }
+
+
+// const isPalindrome = (input) => {
+//     if (typeof input === "string") {
+//         let inputToLower = input.toLowerCase();
+//         let inputSplit = inputToLower.split("");
+//         let inputReverse = inputSplit.reverse();
+//         let inputJoin = inputReverse.join("");
+//         return inputJoin;
+//     }
+//
+// }
+// const testing = isPalindrome("Morgan");
+// console.log(testing);
+
+
+// const isNotPalindrome = (input) => {
+//     if (typeof input !== "string") {
+//         return true;
+//     }
+//     if (typeof input === "string") {
+//         let isPalindrome = input.split("").reverse().join("");
+//         if(input === isPalindrome) {
+//             return false;
+//         }
+//         return true;
+//     }
+// }
+//
+// const testing = isNotPalindrome();
+// console.log("Racecar");
+
+// const convertHourToSec = (Hours) => {
+//     if(!isNaN(Hours) && Hours >= 0) {
+//         let totalSeconds = parseFloat(Hours * 3600);
+//         return totalSeconds;
+//     }
+//     if(typeof Hours !== "number" || Hours < 0 || typeof Hours === 'string') {
+//         return false;
+//     }
+// }
+// const testing = convertHourToSec("2");
+// console.log(testing);
